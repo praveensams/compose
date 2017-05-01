@@ -1,0 +1,18 @@
+--- 
+version: '2'
+
+services:
+
+ apache: 
+   build: "."
+   container_name: test1
+   links: 
+     - apache1
+   ports: 
+     - "8001:80"
+ apache1: 
+   build: "."
+   container_name: test
+   ports: 
+     - "8002:80"
+ 

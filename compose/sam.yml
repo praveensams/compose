@@ -1,0 +1,14 @@
+--- 
+apache: 
+  build: "."
+  container_name: test
+  links: 
+    - "apache1:apache1"
+  ports: 
+    - "8001:80"
+apache1: 
+  build: "."
+  container_name: test
+  ports: 
+    - "8002:80"
+
